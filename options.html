@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quick Headers: Options</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="core.js"></script>
+    <script src="options.js"></script>
+  </head>
+
+  <body>
+
+    <div class="custom-header-list is-hidden">
+        
+      <h1 class="title">Quick Headers</h2>
+      
+      <div class="custom-header">
+        <div class="key"><small>key</small></div>
+        <div class="value"><small>value</small></div>
+        <div class="status"><small>status</small></div>
+        <div class="toggle"><small>toggle</small></div>
+        <div class="delete"><small>delete</small></div>
+      </div>
+
+    </div>
+
+
+    <div class="add-new">
+      <h4 class="title title--subtitle">Add New Header</h4>
+      
+      <form class="add-new__form" method="POST">
+        <input type="text" name="key" placeholder="HEADER_NAME">
+        <input type="text" name="value" placeholder="value">
+        <button class="button button--smoke action--add">Add</button>
+      </form>
+
+  </div>
+  
+  </body>
+</html>
+

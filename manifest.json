@@ -1,0 +1,39 @@
+{
+  "manifest_version": 8,
+
+  "name": "Quick Headers",
+  "version": "0.1",
+
+  "short_name": "Quick Headers",
+  "description": "A helpful tool to allow you to quickly enable add custom HTTP headers to your requests when necessary. With this extension you can add a few custom headers and enable them ony by one on site by site basis. ",
+
+  "icons": {
+    "128": "icons/hat128.png",
+    "48": "icons/hat48.png",
+    "32": "icons/hat32.png",
+    "19": "icons/hat19.png"
+  },
+
+  "browser_action": {
+    "default_title": "Quick Headers",
+    "default_icon": "icons/hat19.png",
+    "default_popup": "options.html"
+  },
+
+  "background": {
+    "scripts": [
+      "core.js",
+      "background.js"
+    ],
+    "persistent": true
+  },
+
+  "permissions": [
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "tabs",
+    "activeTab",
+    "*://*/*"
+  ]
+}
