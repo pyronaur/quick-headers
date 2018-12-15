@@ -1,38 +1,3 @@
-function simpleStringify (object){
-    var simpleObject = {};
-    for (var prop in object ){
-        if (!object.hasOwnProperty(prop)){
-            continue;
-        }
-        if (typeof(object[prop]) == 'object'){
-            continue;
-        }
-        if (typeof(object[prop]) == 'function'){
-            continue;
-        }
-        simpleObject[prop] = object[prop];
-    }
-    return JSON.stringify(simpleObject); // returns cleaned up JSON
-};
-
-const log = message => {
-	if (!chrome.tabs) {
-		console.log(message)
-		return false
-	}
-
-	chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
-        
-        if( typeof message === 'object' ) {
-            message = simpleStringify(message)
-        }
-        
-        chrome.tabs.executeScript(tabs[0].id, {
-			code: `console.log('${message}');`
-		})
-	})
-}
-
 let cached_chrome_storage = {};
 const cache_options = () => {
 
